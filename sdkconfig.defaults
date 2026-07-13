@@ -1,0 +1,9 @@
+# Keep the app image small enough for the default single-app partition.
+# The project only uses LVGL primitives directly, not bundled LVGL examples/demos.
+# CONFIG_LV_BUILD_EXAMPLES is not set
+# CONFIG_LV_BUILD_DEMOS is not set
+
+# BSP + LVGL + Wi-Fi do not fit comfortably in the default 1 MB app slot.
+# CONFIG_PARTITION_TABLE_SINGLE_APP is not set
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
+CONFIG_PARTITION_TABLE_FILENAME="partitions_singleapp_large.csv"
